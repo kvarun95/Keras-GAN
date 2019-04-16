@@ -171,3 +171,6 @@ class DCGAN():
 if __name__ == '__main__':
     dcgan = DCGAN()
     dcgan.train(epochs=4000, batch_size=32, save_interval=50)
+    dcgan.generator.save_weights('saved_model/mnist_generator.h5')
+    dcgan.discriminator.save_weights('saved_model/mnist_discriminator.h5')
+
